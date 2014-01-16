@@ -13,6 +13,12 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!-- Inicialmente entendo a tag meta-data como um valor
+         que pode ser utilizado em toda aplicação, 
+         nesse caso busca um valor de versão dentro da lib para utilizar o google play services
+         que está referenciada(google-play-servicces_lib/res/values/version.xml) -->
+        <meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
         <activity
             android:name="com.gurgel.mapas.MainActivity"
             android:label="@string/app_name" >
