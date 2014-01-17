@@ -1,8 +1,16 @@
 package com.gurgel.mapas;
 
-import android.os.Bundle;
+import android.app.ActionBar;
 import android.app.Activity;
+import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
+import android.widget.Toast;
+
 
 public class MainActivity extends Activity {
 
@@ -16,8 +24,31 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    	MenuInflater menuInflater = getMenuInflater();
+    	menuInflater.inflate(R.menu.main, menu);
+        //getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+		case R.id.action_mapa:
+			mostrarMapa();
+			return true;
+		
+
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+    	
+    	
+    }
+    
+    
+    public void mostrarMapa(){
+    	setContentView(R.layout.activity_mapa);
+    	
+    }
+    
     
 }

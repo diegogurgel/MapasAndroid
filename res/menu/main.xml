@@ -1,9 +1,20 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapas="http://schemas.android.com/apk/res-auto" >
 
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
-
+    <item 
+        android:id="@+id/action_mapa"
+        android:icon="@drawable/ic_action_map"
+        android:title="@string/tituloMapa"
+        android:showAsAction="always"
+        android:visible="true"/>
+    <!--  <item 
+        android:id="@+id/action_2"
+        android:icon="@drawable/common_signin_btn_icon_disabled_focus_dark"
+        android:title="@string/tituloMapa"
+        android:showAsAction="always"/>-->
 </menu>

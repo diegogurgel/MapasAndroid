@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
@@ -13,25 +13,30 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <!-- Inicialmente entendo a tag meta-data como um valor
+
+        <!--
+         Inicialmente entendo a tag meta-data como um valor
          que pode ser utilizado em toda aplicação, 
          nesse caso busca um valor de versão dentro da lib para utilizar o google play services
-         que está referenciada(google-play-servicces_lib/res/values/version.xml) -->
-        <meta-data android:name="com.google.android.gms.version"
-           android:value="@integer/google_play_services_version" />
-        
-        <!-- Para obter uma chave vá até https://code.google.com/apis/console
+         que está referenciada(google-play-servicces_lib/res/values/version.xml)
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--
+        Para obter uma chave vá até https://code.google.com/apis/console
         Crie um projeto, acesse o projeto e em APIs & auth>APIs ative o Google Maps Android API v2.
         Acesse a area Credentials e crie uma nova chave(Create new key>Android key) 
         Para obter a chave, vá até as preferencias do eclipse>Android>debug e copie o SHA1 fingerprint
         e cole no campo do console API e separado por ponto e virgula o nome do pacote da aplicação, 
         nesse caso ficou algo do tipo:
-        45:B5:E4:6F:36:AD:0A:98:94:B4:02:66:2B:12:17:F2:56:26:A0:E0;com.gurgel.maps
-         -->
+        45:B5:E4:6F:36:AD:0A:98:94:B4:02:66:2B:12:17:F2:56:26:A0:E0;com.gurgel.mapas
+        -->
         <meta-data
-    		android:name="com.google.android.maps.v2.API_KEY"
-    		android:value="AIzaSyB66ny_eHadYY2mb9gisDoI5t4WocrC3wE"/>
-        
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB66ny_eHadYY2mb9gisDoI5t4WocrC3wE" />
+
         <activity
             android:name="com.gurgel.mapas.MainActivity"
             android:label="@string/app_name" >
@@ -40,6 +45,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gurgel.mapas.MapaActivity"
+            android:label="@string/title_activity_mapa_acticity" >
         </activity>
     </application>
 
