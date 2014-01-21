@@ -2,6 +2,7 @@ package com.gurgel.mapas;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -27,6 +28,7 @@ public class MainActivity extends Activity {
     	MenuInflater menuInflater = getMenuInflater();
     	menuInflater.inflate(R.menu.main, menu);
         //getMenuInflater().inflate(R.menu.main, menu);
+    	overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         return super.onCreateOptionsMenu(menu);
     }
     @Override
@@ -46,7 +48,10 @@ public class MainActivity extends Activity {
     
     
     public void mostrarMapa(){
-    	setContentView(R.layout.activity_mapa);
+    	Intent  i =  new Intent(this,MapaActivity.class);
+    	startActivity(i);
+    	overridePendingTransition(R.anim.rotatein, R.anim.rotatein);
+
     	
     }
     

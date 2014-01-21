@@ -10,13 +10,9 @@ public class MapaActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mapa);
+	    //getActionBar().setDisplayHomeAsUpEnabled(true);
+		
+	    // If your minSdkVersion is 11 or higher, instead use:
+	    getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.mapa_activity, menu);
-		return true;
-	}
-
 }

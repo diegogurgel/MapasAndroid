@@ -12,6 +12,8 @@
         android:title="@string/tituloMapa"
         android:showAsAction="always"
         android:visible="true"/>
+    
+
     <!--  <item 
         android:id="@+id/action_2"
         android:icon="@drawable/common_signin_btn_icon_disabled_focus_dark"
